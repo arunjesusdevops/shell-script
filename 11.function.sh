@@ -7,7 +7,7 @@ then
     echo "Installing is failed"
     exit 1
 else
-    ehco "Installing is success"
+    echo "Installing is success"
 fi
 }
 
