@@ -1,8 +1,10 @@
 #!/bin/bash
 
-if (today != "Sunday") {
-    print "go to school"
-}
-else{
-    print "go to school"
-}
+NUMBER=$1
+
+if [ $NUMBER ]
+then
+   statement
+else
+   statement
+fi
