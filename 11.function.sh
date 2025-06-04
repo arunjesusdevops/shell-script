@@ -1,16 +1,15 @@
 #!/bin/bash
+ID=$(id -u)
 
-VALIDATE () {
+VALIDATE (){
 if [ $? -ne 0 ]
 then
-    echo "Installing failed"
+    echo "Installing is failed"
     exit 1
 else
-    ehco "Installed successfully" 
+    ehco "Installing is success"
 fi
 }
-
-ID=$(id -u)
 
 if [ $ID -ne 0 ];
 then
