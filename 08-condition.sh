@@ -2,9 +2,9 @@
 
 NUMBER=$1
 
-if [ $NUMBER ]
+if [ $NUMBER -gt 100 ]
 then
-   statement
+   echo "Given number $NUMBER is greater than 100"
 else
-   statement
+   echo "Given number $NUMBER is not grrater than 100"
 fi
