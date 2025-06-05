@@ -13,7 +13,7 @@ VALIDATE(){
 TIMESTAMP=$(date %F-%H-%M-%S)
 LOGFILE="/tmp/$0-$TIMESTAMP.log"
 
-echo "Script started executing at $TIMESTAMP"
+echo "Script started executing at $TIMESTAMP" &>> $LOGFILE
 
 R="\e[31m"
 G="\e[32m"
