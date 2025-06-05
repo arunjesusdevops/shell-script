@@ -10,6 +10,8 @@ VALIDATE(){
         echo -e "$2 ....$R SUCESS $N"
     fi
 }
+TIMESTAMP=$(date %F-%H-%M-%S)
+LOGFILE="/tmp/$0-"
 
 R="\e[31m"
 G="\e[32m"
