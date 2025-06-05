@@ -3,23 +3,26 @@ ID=$(id -u)
 TIMESTAMP=$(date +%F-%H-%M-%S)
 
 LOGFILE="/tmp/$0-$TIMESTAMP.log"
+R="\e[31m"
+G="\e[32m"
+N="\e[0m"
 
 VALIDATE (){
 if [ $1 -ne 0 ]
 then
-    echo "Error::  $2 ... failed"
+    echo -e "$R Error::  $2 ... failed"
     exit 1
 else
-    echo "$2 ..success"
+    echo -e "$2 ..$G success"
 fi
 }
 
 if [ $ID -ne 0 ];
 then
-    echo "ERROR:: Please run the script with root access"
+    echo -e "$R ERROR:: Please run the script with root access"
     exit 1 
 else
-    echo "You are root user"
+    echo -e "$N You are root user"
 fi
 
 yum install mysql -y &>> $LOGFILE
