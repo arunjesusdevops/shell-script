@@ -19,7 +19,7 @@ fi
 
 if [ $ID -ne 0 ];
 then
-    echo -e "$R ERROR:: Please run the script with root access"
+    echo -e "$R ERROR:: Please run the script with root access $N"
     exit 1 
 else
     echo -e "$N You are root user"
